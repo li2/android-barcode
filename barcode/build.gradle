@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion vCompileSdk
+
+    defaultConfig {
+        minSdkVersion vMinSdk
+        targetSdkVersion vTargetSdk
+        versionCode 1
+        versionName "0.1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$vKotlin"
+    implementation "androidx.appcompat:appcompat:$rootProject.vAndroidxAppcompat"
+    implementation "androidx.core:core-ktx:$rootProject.vAndroidxCoreKtx"
+
+    testImplementation "junit:junit:$rootProject.vJunit"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.vAndroidxTestJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.vAndroidxTestEspresso"
+
+    // AndroidX
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.vAndroidxConstraintlayout"
+
+    // Barcode lib
+    implementation("com.journeyapps:zxing-android-embedded:$vZxingAndroid") {
+        transitive = false
+    }
+    implementation "com.google.zxing:core:$vZxingCore"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.vRxAndroid"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.vRxKotlin"
+    implementation "com.petarmarijanovic:rx-activity-result:$rootProject.vRxActivityResult"
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$rootProject.vTimber"
+}

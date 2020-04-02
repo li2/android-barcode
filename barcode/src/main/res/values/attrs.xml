@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BarcodeScanner">
+        <attr name="barcodeScannerPointsColor" format="reference|color"/>
+        <attr name="barcodeScannerViewfinderLaserColor" format="reference|color"/>
+        <attr name="barcodeScannerViewfinderMask" format="reference|color"/>
+        <attr name="barcodeScannerRectHeight" format="dimension"/>
+        <attr name="barcodeScannerRectWidth" format="dimension"/>
+        <attr name="barcodeScannerHintText" format="string"/>
+        <attr name="barcodeScannerHintTextappearance" format="reference"/>
+    </declare-styleable>
+</resources>

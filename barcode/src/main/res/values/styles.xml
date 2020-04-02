@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="barcode_scanner_theme" parent="bs_fullscreen">
+        <item name="barcodeScannerHintText">@string/bs_hint_text</item>
+        <item name="barcodeScannerHintTextappearance">@style/bs_hint_textappearance</item>
+        <item name="barcodeScannerPointsColor">@color/bs_possible_result_points_color</item>
+        <item name="barcodeScannerViewfinderLaserColor">@color/bs_viewfinder_laser_color</item>
+        <item name="barcodeScannerViewfinderMask">@color/bs_viewfinder_mask</item>
+        <item name="barcodeScannerRectHeight">@dimen/bs_framing_rect_height</item>
+        <item name="barcodeScannerRectWidth">@dimen/bs_framing_rect_width</item>
+    </style>
+
+    <style name="bs_fullscreen" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="bs_hint_textappearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.li2.android.barcode" >
+    <application>
+        <activity
+            android:name=".BarcodeScannerActivity"
+            android:screenOrientation="sensorPortrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/barcode_scanner_theme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+</manifest>

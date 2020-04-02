@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">barcode</string>
+    <string name="bs_hint_text">Align the QR Code within the frame to scan</string>
+</resources>

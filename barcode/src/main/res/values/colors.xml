@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bs_possible_result_points_color">#00BCD4</color>
+    <color name="bs_viewfinder_laser_color">#FFC107</color>
+    <color name="bs_viewfinder_mask">#60000000</color>
+</resources>
