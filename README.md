@@ -2,7 +2,7 @@
 
 ##  Barcode Library
 
-This library is a wrapper of [zxing-android](https://github.com/journeyapps/zxing-android-embedded)
+A library to wrap [zxing-android](https://github.com/journeyapps/zxing-android-embedded) to scan barcode in Rx.
 
 
 ## Usage
@@ -17,12 +17,17 @@ doWithCameraPermission {
 }
 ```
 
+Note: `doWithCameraPermission`  is an extension function to request camera runtime permission, which is not part of this library, you can check [Utils.kt](https://github.com/li2/android-barcode/blob/master/app/src/main/java/me/li2/android/barcodesample/Utils.kt) for more details.
+
+
+<img width="300" alt="barcode_scanner_ui" src="https://github.com/li2/android-barcode/blob/master/barcode_scanner_ui.png">
+
+
 ## Download
 
 ```gradle
 implementation 'com.github.li2:android-barcode:latest_version'
 ```
-
 
 
 ## License
