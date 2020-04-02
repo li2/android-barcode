@@ -1,12 +1,9 @@
 package me.li2.android.barcode
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.LifecycleOwner
 import com.journeyapps.barcodescanner.CaptureManager
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
@@ -25,11 +22,7 @@ internal class BarcodeScannerActivity : AppCompatActivity(), LifecycleOwner {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        requestWindowFeature(Window.FEATURE_NO_TITLE)
-//        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.barcode_scanner_activity)
-//        initToolBar()
         initScannerView(savedInstanceState)
 
         findViewById<View>(R.id.back_button).setOnClickListener {
@@ -42,10 +35,6 @@ internal class BarcodeScannerActivity : AppCompatActivity(), LifecycleOwner {
         capture = CaptureManager(this, barcodeScannerView)
         capture.initializeFromIntent(intent, savedInstanceState)
         capture.decode()
-    }
-
-    private fun initToolBar() {
-//        setToolbar(tb_scanner, getString(R.string.barcode_scanner_toolbar_title))
     }
 
     override fun onResume() {
@@ -75,19 +64,5 @@ internal class BarcodeScannerActivity : AppCompatActivity(), LifecycleOwner {
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         return barcodeScannerView.onKeyDown(keyCode, event) || super.onKeyDown(keyCode, event)
-    }
-}
-
-private fun Activity.setToolbar(toolbar: Toolbar,
-                                title: String = "", @DrawableRes iconId: Int? = null) {
-    (this as? AppCompatActivity)?.apply {
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            setTitle(title)
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-            setHomeButtonEnabled(true)
-        }
-        iconId?.run { toolbar.setNavigationIcon(this) }
     }
 }
