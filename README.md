@@ -20,7 +20,7 @@ doWithCameraPermission {
 Note: `doWithCameraPermission`  is an extension function to request camera runtime permission, which is not part of this library, you can check [Utils.kt](https://github.com/li2/android-barcode/blob/master/app/src/main/java/me/li2/android/barcodesample/Utils.kt) for more details.
 
 
-<img width="300" alt="barcode_scanner_ui" src="https://github.com/li2/android-barcode/blob/master/barcode_scanner_ui.png">
+<img width="300" alt="barcode_scanner_ui" src="screenshots/barcode_scanner_ui.png">
 
 
 ## Download
