@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion vCompileSdk
+    compileSdkVersion androidCompileSdk_version
 
     dataBinding {
         enabled = true
@@ -12,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId 'me.li2.android.barcodesample'
-        minSdkVersion vMinSdk
-        targetSdkVersion vTargetSdk
+        minSdkVersion androidMinSdk_version
+        targetSdkVersion androidTargetSdk_version
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -41,14 +41,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':barcode')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$vKotlin"
-    implementation "androidx.appcompat:appcompat:$rootProject.vAndroidxAppcompat"
-    implementation "androidx.core:core-ktx:$rootProject.vAndroidxCoreKtx"
-    implementation "androidx.constraintlayout:constraintlayout:$vAndroidxConstraintlayout"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidx_appcompat_version"
+    implementation "androidx.core:core-ktx:$rootProject.androidx_ktx_version"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
 
-    testImplementation "junit:junit:$rootProject.vJunit"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.vAndroidxTestJunit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.vAndroidxTestEspresso"
+    testImplementation "junit:junit:$rootProject.junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxTestExt_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCore_version"
 
     //Material
     implementation "com.google.android.material:material:$vGoogleMaterial"
@@ -58,9 +58,9 @@ dependencies {
     implementation "com.github.li2:android-view:$rootProject.vLi2View"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.vRxAndroid"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.vRxKotlin"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlin_version"
 
     //Timber
-    implementation "com.jakewharton.timber:timber:$vTimber"
+    implementation "com.jakewharton.timber:timber:$timber_version"
 }

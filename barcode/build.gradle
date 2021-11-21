@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion vCompileSdk
+    compileSdkVersion androidCompileSdk_version
 
     defaultConfig {
-        minSdkVersion vMinSdk
-        targetSdkVersion vTargetSdk
+        minSdkVersion androidMinSdk_version
+        targetSdkVersion androidTargetSdk_version
         versionCode 1
         versionName "0.1.0"
 
@@ -40,28 +40,28 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$vKotlin"
-    implementation "androidx.appcompat:appcompat:$rootProject.vAndroidxAppcompat"
-    implementation "androidx.core:core-ktx:$rootProject.vAndroidxCoreKtx"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidx_appcompat_version"
+    implementation "androidx.core:core-ktx:$rootProject.androidx_ktx_version"
 
-    testImplementation "junit:junit:$rootProject.vJunit"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.vAndroidxTestJunit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.vAndroidxTestEspresso"
+    testImplementation "junit:junit:$rootProject.junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxTestExt_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCore_version"
 
     // AndroidX
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.vAndroidxConstraintlayout"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.androidx_constraintlayout_version"
 
     // Barcode lib
-    implementation("com.journeyapps:zxing-android-embedded:$vZxingAndroid") {
+    implementation("com.journeyapps:zxing-android-embedded:$zxing_android_version") {
         transitive = false
     }
-    implementation "com.google.zxing:core:$vZxingCore"
+    implementation "com.google.zxing:core:$zxing_core_version"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.vRxAndroid"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.vRxKotlin"
-    implementation "com.petarmarijanovic:rx-activity-result:$rootProject.vRxActivityResult"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlin_version"
+    implementation "com.petarmarijanovic:rx-activity-result:$rootProject.rxActivityResult_version"
 
     //Timber
-    implementation "com.jakewharton.timber:timber:$rootProject.vTimber"
+    implementation "com.jakewharton.timber:timber:$rootProject.timber_version"
 }
