@@ -41,15 +41,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "androidx.appcompat:appcompat:$rootProject.androidx_appcompat_version"
-    implementation "androidx.core:core-ktx:$rootProject.androidx_ktx_version"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    implementation "androidx.core:core-ktx:$androidx_ktx_version"
 
-    testImplementation "junit:junit:$rootProject.junit_version"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxTestExt_junit_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCore_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$androidxTestExt_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCore_version"
 
     // AndroidX
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.androidx_constraintlayout_version"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
 
     // Barcode lib
     implementation("com.journeyapps:zxing-android-embedded:$zxing_android_version") {
@@ -58,10 +58,11 @@ dependencies {
     implementation "com.google.zxing:core:$zxing_core_version"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid_version"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlin_version"
-    implementation "com.petarmarijanovic:rx-activity-result:$rootProject.rxActivityResult_version"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroid_version"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlin_version"
+    implementation "com.petarmarijanovic:rx-activity-result:$rxActivityResult_version"
+    implementation "com.github.akarnokd:rxjava3-bridge:$rxJava3_bridge_version"
 
     //Timber
-    implementation "com.jakewharton.timber:timber:$rootProject.timber_version"
+    implementation "com.jakewharton.timber:timber:$timber_version"
 }
