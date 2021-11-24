@@ -42,24 +42,24 @@ dependencies {
     implementation project(':barcode')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "androidx.appcompat:appcompat:$rootProject.androidx_appcompat_version"
-    implementation "androidx.core:core-ktx:$rootProject.androidx_ktx_version"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    implementation "androidx.core:core-ktx:$androidx_ktx_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
 
-    testImplementation "junit:junit:$rootProject.junit_version"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxTestExt_junit_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCore_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$androidxTestExt_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCore_version"
 
     //Material
-    implementation "com.google.android.material:material:$vGoogleMaterial"
+    implementation "com.google.android.material:material:$g_material_version"
 
     //MyLibs
-    implementation "com.github.li2:android-common:$rootProject.vLi2Common"
-    implementation "com.github.li2:android-view:$rootProject.vLi2View"
+    implementation "com.github.li2:android-common:$vLi2Common"
+    implementation "com.github.li2:android-view:$vLi2View"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid_version"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlin_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin_version"
 
     //Timber
     implementation "com.jakewharton.timber:timber:$timber_version"
