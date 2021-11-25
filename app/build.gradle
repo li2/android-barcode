@@ -58,7 +58,7 @@ dependencies {
     implementation "com.github.li2:android-view:$vLi2View"
 
     //Rx
-    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid2_version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin_version"
 
     //Timber
